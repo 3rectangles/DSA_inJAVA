@@ -1,6 +1,5 @@
-package org.example;
+package collections;
 
-import javax.swing.*;
 import java.util.*;
 
 /**

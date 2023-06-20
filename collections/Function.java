@@ -1,4 +1,4 @@
-package org.example;
+package collections;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
