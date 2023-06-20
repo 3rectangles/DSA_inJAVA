@@ -64,4 +64,5 @@ public class graph_m_coloring {
         }
 
     }
+}
 
