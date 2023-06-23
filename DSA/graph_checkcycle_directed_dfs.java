@@ -15,6 +15,7 @@ public class graph_checkcycle_directed_dfs {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt(); m = sc.nextInt();
         adj = new ArrayList[n];  // initialise array
+        for (int i = 0; i < n; i++) adj[i] = new ArrayList<>();
         //read edges
         for (int i = 0; i < m; i++) {
             int u = sc.nextInt(); int v = sc.nextInt();
@@ -29,21 +30,24 @@ public class graph_checkcycle_directed_dfs {
         int start = 0;
         for (int i = 0; i < n; i++) {
             if(vis[i] == false){
-                 if(dfs(i)) // if dfs returns true then cycle found, nodes of cycle is inside stack
-                cycle_found =true;
+                 if(dfs(i)){ // if dfs returns true then cycle found, nodes of cycle is inside stack
+                     cycle_found =true;
+                     break;
+                 }
             }
-
-
-            List<Integer> cycle = new ArrayList<>();
-            //par =par[start]; //get parent of start
-            if(cycle_found) //retreive the cylce from stack
-            {
+        }
+        List<Integer> cycle;
+        cycle = new ArrayList<>();
+        //par =par[start]; //get parent of start
+        if(cycle_found) //retreive the cylce from stack
+        {
+            while (!path.isEmpty()) {
                 cycle.add(path.pop());
             }
-            else
-                System.out.println("no cycle found");
-
+            System.out.println("Cycle found: " + cycle);
         }
+        else
+            System.out.println("no cycle found");
     }
 
     private static boolean dfs(int u) {
