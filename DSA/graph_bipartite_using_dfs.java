@@ -1,8 +1,5 @@
 package DSA;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
+import java.util.*;
 public class graph_bipartite_using_dfs {
     static int bipartite(int node, int c, List<Integer>[] adj, int[] color, int[] vis) {
         // Giving colors using DFS

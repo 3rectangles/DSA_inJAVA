@@ -38,6 +38,7 @@ public class Array {
         for (int i = 0; i < arr.length; i++) {
             arr[i]=i;
         }
+        Arrays.fill(arr,-1);
         System.out.println(Arrays.binarySearch(arr,6)); //returns 6
         System.out.println(Arrays.binarySearch(arr,10)); //returns -11
 
