@@ -22,7 +22,7 @@ public class graph_k_shortest_path {
 
         dij(src);
         //use dij2 when using dis as list
-
+        //explains overshadow of static attributes of class
     }
 
     private static void dij(int src) {
