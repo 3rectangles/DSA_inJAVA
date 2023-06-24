@@ -22,7 +22,7 @@ public class graph_shortest_path_undirected {
         path = new int[n]; // stores count of shortest paths
         // enter multiple starting points in the queue
         int src = sc.nextInt();
-        queue.offer(src); dis[src]=0;
+        queue.offer(src); dis[src]=0; path[src]=1;
         while (!queue.isEmpty()) {
            int u = queue.poll();
            for ( int child:adj[u]){
