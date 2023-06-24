@@ -21,6 +21,7 @@ public class graph_k_shortest_path {
         Arrays.fill(dis[src],0);
 
         dij(src);
+        //use dij2 when using dis as list
 
     }
 
