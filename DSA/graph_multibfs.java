@@ -36,7 +36,7 @@ public class graph_multibfs {
                         queue.offer(child);
                         vis[child] = true; // push and mark
                         level.add(child); // visited in this level
-                        dis[child] = dis[node] + 1; // level inc or distance from source nodes
+                        dis[child] = dis[u] + 1; // level inc or distance from source nodes
                     }
                     else if (vis[child] == 1) { // already visited either parent or visited by some other source
                         // acc to ques
