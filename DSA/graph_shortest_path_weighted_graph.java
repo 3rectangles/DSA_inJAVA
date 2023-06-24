@@ -12,7 +12,7 @@ public class graph_shortest_path_weighted_graph {
     static boolean[] vis;
     static int[] dis ;
     static int[] par; static int[] path;
-    static PriorityQueue<pair> pq = new PriorityQueue<>( (p1,p2)-> p2.first= p1.second); // max priority queue
+    static PriorityQueue<pair> pq = new PriorityQueue<>( (p1,p2)-> p1.first- p2.second); // min priority queue heap
 
     public static void main(String[] args) {
         read_wt_graph();
