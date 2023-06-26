@@ -30,6 +30,7 @@ public class graph_hamiltonian_path {
 
         if (dp.get(u).get(mask) != -1) return dp.get(u).get(mask);
 
+
         // visit unvisited cities
         long ans = 0;
         for (int city : adj[u]) {

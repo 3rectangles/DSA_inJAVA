@@ -56,6 +56,7 @@ public class longest_path_DAG_dp {
         for (int i = 0; i < n; i++) {
             adj[i] = new ArrayList<>();
         }
+
         for (int i = 0; i < m; i++) {
             int u = sc.nextInt(); int v = sc.nextInt(); int w = sc.nextInt();
             adj[u].add(new pair(v,w));

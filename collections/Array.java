@@ -33,6 +33,12 @@ public class Array {
 
         // declare and fill array with specifix value
         int[] arr= new int[10];
+
+
+        int[] arr1 = {4, 8, 2};
+        // OR
+        int[] arr2 = new int[]{4, 8, 2};
+
         Arrays.fill(arr,-1);
         arr[3]=6;
         for (int i = 0; i < arr.length; i++) {
