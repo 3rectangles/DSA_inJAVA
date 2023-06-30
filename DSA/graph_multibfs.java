@@ -38,7 +38,7 @@ public class graph_multibfs {
                         level.add(child); // visited in this level
                         dis[child] = dis[u] + 1; // level inc or distance from source nodes
                     }
-                    else if (vis[child] == 1) { // already visited either parent or visited by some other source
+                    else if (vis[child] == true) { // already visited either parent or visited by some other source
                         // acc to ques
                     }
                 }
