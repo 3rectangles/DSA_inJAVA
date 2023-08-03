@@ -21,13 +21,25 @@ public class Stringclass {
 
         String s3= new String("string object");
         String s4 ="string object";
-        if (s3 == s4 ) {
+
+     //  Since s3 is created using the new keyword, it points to a different object than the one pointed to by s4, which is a string literal.
+     //  So, this condition will be false, and the code inside this block will not be executed.
+
+     if (s3 == s4 ) {
             System.out.println("literal");
         } else if (s3.equals(s4)) {
             System.out.println("value is smae ");
         }
 
+     // s3.equals(s4): This checks if the values of s3 and s4 are the same.
+     // The equals() method compares the content of the strings, not their memory references.
+     // In this case, both s3 and s4 have the same value "string object",
+     // so this condition will be true, and the code inside this block will be executed.
+     //
         // contains
+
+     // The contains() method in Java checks if a particular substring is present within the original string.
+     // If it finds the substring, it returns true, and if the substring is not found, it returns false.
         if (s3.contains("obj"))
             System.out.println("wokrng of contains");
         String upper =s3.toUpperCase();

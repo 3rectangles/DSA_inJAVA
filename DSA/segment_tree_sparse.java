@@ -41,6 +41,12 @@ class SegmentTree {
 
     // Recursive function to build the Segment Tree
     private Node buildTree(int[] nums, int start, int end) {
+        if(start >end){
+//            Node node = new Node();
+//            node.sum=0; // this node doesnt exit
+             return null;
+//            return node;
+        }
         Node node = new Node();
         // Assign the start and end intervals of this node
         node.startInterval = start;
@@ -52,27 +58,41 @@ class SegmentTree {
             // Recursively build the left and right children of this node
             node.left = buildTree(nums, start, mid);
             node.right = buildTree(nums, mid + 1, end);
+            //before accessing node check if its not null.
             node.sum = node.left.sum + node.right.sum; // The sum of this node is the sum of its left and right children
          }
         return node; // Return the node
     }
-    public void update(int idx, int val) {
-        update(root, idx, val);
-    }
+    private Node update(Node node, int start, int end, int pos, int val) {
+        // If the node doesn't exist, create it
+        if (node == null) {
+            node = new Node();
+            node.startInterval = start;
+            node.endInterval = end;
+        }
 
-    private void update(Node node, int pos, int val) {
-        if (node.startInterval == node.endInterval) { // Leaf node
+        // If it's a leaf node, and start = end = pos
+        if (start == end) {
             node.sum = val;
         } else {
-            int mid = node.startInterval + (node.endInterval - node.startInterval) / 2;
+            int mid = start + (end - start) / 2;
             if (pos <= mid) { // Update left child
-                update(node.left, pos, val);
+                node.left = update(node.left, start, mid, pos, val);
             } else { // Update right child
-                update(node.right, pos, val);
+                node.right = update(node.right, mid + 1, end, pos, val);
             }
-            node.sum = node.left.sum + node.right.sum; // Update current node's sum
+            node.sum = 0;
+            if (node.left != null) node.sum += node.left.sum;
+            if (node.right != null) node.sum += node.right.sum;
         }
+        return node;
     }
+
+    public void update(int idx, int val) {
+        int maxN= (int) 1e9;
+        root = update(root, 0, maxN, idx, val);
+    }
+
 
     // Function to perform a range sum query
     public int query(int l, int r) {

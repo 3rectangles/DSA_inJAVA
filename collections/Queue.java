@@ -2,10 +2,15 @@ package collections;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.*;
 
 public class Queue {
     public static void main(String[] args) {
+//        Queue<String> linkedList = new LinkedList<>();
+
+        //  add(), offer(), remove(), poll(), peek()
 
     }
 }
@@ -49,6 +54,7 @@ class PriorityQueueExample {
         // Create a priority queue with a lambda comparator for pairs, for max priority queue
         PriorityQueue<Pair> priorityQueue = new PriorityQueue<>((pair1, pair2) -> pair2.getKey() - pair1.getKey());
 
+
         // Add pairs to the priority queue
         priorityQueue.add(new Pair(3, "Value 3"));
         priorityQueue.add(new Pair(1, "Value 1"));
@@ -62,8 +68,17 @@ class PriorityQueueExample {
     }
 }
 
+//class usingLinkedList{
+//
+//    public static void main(String[] args) {
+//        Queue<String> q= new LinkedList<>(); // this shows eror bec current class neme is queue.
+//
+//    }
+//}
+
 // The lambda function takes two arguments, pair1 and pair2, which represent two Pair objects.
-// The comparison is done by subtracting the key of pair1 from the key of pair2. If the result is positive, it means pair2 has a higher priority than pair1, and if it's negative, pair1 has a higher priority. If the result is zero, it means both pairs have the same priority.
+// The comparison is done by subtracting the key of pair1 from the key of pair2.
+// If the result is positive, it means pair2 has a higher priority than pair1, and if it's negative, pair1 has a higher priority. If the result is zero, it means both pairs have the same priority.
 
 
 

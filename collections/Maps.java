@@ -37,16 +37,19 @@ String name; int score; String genre;
         return Objects.hash(name, score, genre);
     }
 }
+
+
 public class Maps {
 
     Comparator<movies> cmp = (mv1,mv2) ->{
       if (mv1.score ==mv2.score)
-          return mv1.name.compareTo(mv2.name);
-      return mv1.score - mv2.score;
+          return mv1.name.compareTo(mv2.name); // lexi-graphical
+      return mv1.score - mv2.score; //ascending order
     };
     static Map<String, TreeSet<movies>> genremap = new HashMap<>();
     Map<String, Integer> movieScores = new HashMap<>();
     Map<String, String> movieGenres = new HashMap<>();
+
     public static void main(String[] args) {
         Maps ob= new Maps();
         
