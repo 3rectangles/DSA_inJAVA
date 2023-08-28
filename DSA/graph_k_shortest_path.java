@@ -1,13 +1,11 @@
 package DSA;
-
 import java.util.*;
-
 
 public class graph_k_shortest_path {
     static List<pair>[] adj;
     static int n, m;
     static int[][] dis ;
-    static PriorityQueue<pair> pq = new PriorityQueue<>( (p1, p2)-> p1.first- p2.second); // max priority queue
+    static PriorityQueue<pair> pq = new PriorityQueue<>( (p1, p2)-> p1.first- p2.first); // min priority queue
      static    int k =5;
 
     public static void main(String[] args) {
@@ -32,6 +30,7 @@ public class graph_k_shortest_path {
             pair node = pq.poll();//  {dis, u}
             int d = node.first; //dis to reach this u
             int u = node.second;
+
             if( dis[u][k-1] < d )// we already have shorter dis to u
                 continue;
             for( pair n: adj[u]){
@@ -90,7 +89,6 @@ public class graph_k_shortest_path {
 
                     // Sort the distances list for the child node
                     Collections.sort(dis.get(child));
-
                     // Add the updated child node to the priority queue
                     pq.offer(new pair(dis.get(child).get(k - 1), child));
                 }
@@ -113,3 +111,5 @@ public class graph_k_shortest_path {
         }
     }
 }
+
+

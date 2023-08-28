@@ -13,6 +13,7 @@ public class graph_bipartite_using_dfs {
                     return -1;
                 }
             } else { // Already colored
+                    // parent will never be of same color
                 if (color[it] == color[node]) {
                     return -1; // Not bipartite
                 }

@@ -29,7 +29,7 @@ public class graph_shortest_path_undirected {
                if( dis[child] > dis[u] +1) {
                    dis[child] = dis[u] +1;
                    path[child] = path[u];
-                   par[child]=path[u];
+                   par[child]=u;
                }
                else if( dis[child] == dis[u]+1) //found another shortest path
                {

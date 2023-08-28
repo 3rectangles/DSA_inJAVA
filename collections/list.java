@@ -13,5 +13,9 @@ public class list {
             graph.add(new ArrayList<>());
         }
 
+        //graph.size();
+
+
+
     }
 }

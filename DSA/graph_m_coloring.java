@@ -7,6 +7,7 @@ import java.util.*;
 
 
 public class graph_m_coloring {
+
     static void giveColor(int i, int n, List<Integer>[] adj, Map<Integer, List<Integer>> color, boolean[] vis) {
         // Using bfs to give min possible colors
         Queue<Integer> q = new LinkedList<>();
@@ -20,10 +21,12 @@ public class graph_m_coloring {
             vis[node] = true; // Will be colored
             Arrays.fill(colorUsed, false);
             for (int it : adj[node]) { // Adjacent
-                if (!vis[it]) { // Unvisited, don't have color
+                if (!vis[it]) { // Unvisited, don't have color and not in queue
                     q.add(it); // Will be assigned color
+                    vis[it] =true;
                 } else { // Have color or is in the queue, to be assigned color later
-                    colorUsed[haveColor[it]] = true;
+                    if (haveColor[it] >0)
+                      colorUsed[haveColor[it]] = true;
                 }
             }
             // Assign available color

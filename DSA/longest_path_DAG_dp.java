@@ -34,6 +34,7 @@ public class longest_path_DAG_dp {
     }
     public static void longest_path(int i){
         dp[i] =0;
+        List<Integer> top= new ArrayList<>(2);
         for ( pair child :adj[i]){
             int u = child.first;
             int wt = child.second; // wt is length of path
@@ -41,9 +42,19 @@ public class longest_path_DAG_dp {
                 longest_path(u);
             // for every child find the best child
             dp[i] = Math.max(dp[i], dp[u] +1);
+            // store 2 best child
+            if( dp[u] > top.get(2))
+            {
+                top.set(2,dp[u]);
+                Collections.sort(top);
+            }
+
         }
         //calculated longest path starting from i
         result = Math.max(result, dp[i]);
+        // longest path taking i in btw
+        result = Math.max(result, top.get(0)+top.get(1)+1);
+
     }
 
 
