@@ -35,6 +35,7 @@ public class Array {
         int[] arr= new int[10];
 
 
+
         int[] arr1 = {4, 8, 2};
         // OR
         int[] arr2 = new int[]{4, 8, 2};
@@ -49,6 +50,13 @@ public class Array {
         System.out.println(Arrays.binarySearch(arr,10)); //returns -11
 
         System.out.println(Arrays.binarySearch(arr,-134)); //returns -1
+
+        // printing array
+            String[] myArray = {"Apple", "Banana", "Cherry", "Date"};
+
+            // Printing the array using Arrays.toString
+            System.out.println(Arrays.toString(myArray)); // prints array
+            System.out.println(myArray.toString()); // prints memory address
 
 
         // 2D ARRAYS dynamic

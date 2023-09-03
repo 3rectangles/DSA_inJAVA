@@ -7,7 +7,7 @@ public class sliding_win_1 {
         Solution ob =new Solution();
 
         int ans ;
-        String s= "pwwkew"    ;
+        String s= "pwwkew"  ;
         ans =ob.lengthOfLongestSubstring(s);
 
         System.out.println(ans);

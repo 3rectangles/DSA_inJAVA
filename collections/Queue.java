@@ -49,7 +49,7 @@ class Pair {
     }
 }
 
-class PriorityQueueExample {
+class   PriorityQueueExample {
     public static void main(String[] args) {
         // Create a priority queue with a lambda comparator for pairs, for max priority queue
         PriorityQueue<Pair> priorityQueue = new PriorityQueue<>((pair1, pair2) -> pair2.getKey() - pair1.getKey());
