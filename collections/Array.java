@@ -1,9 +1,6 @@
 package collections;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Array {
 
@@ -33,6 +30,16 @@ public class Array {
 
         // declare and fill array with specifix value
         int[] arr= new int[10];
+
+        //sortinng 2D array
+
+        int[][] A = new int[3][3];
+        Comparator<int[]> cmp = (int[] a, int[] b)->{
+            return a[0]-b[0];
+        };
+
+        // sorting the array with the start value
+        Arrays.sort(A, cmp);
 
 
 
