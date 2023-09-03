@@ -1,10 +1,19 @@
 package collections;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Stringclass {
 
     public static void main(String[] args) {
+        //split
+        //The period . and * are  a special character in regular expressions,
+        //  and to specify it as the delimiter, you need to escape it using the double backslash \\.
+        String queryIP = "22.1234.234.23";
+        String[] tokens = queryIP.split("\\."); // split using '.' as delimeter
+        System.out.println(Arrays.toString(Arrays.stream(tokens).toArray()));
+
+
         String s="trialiaia";
         System.out.println();
        String sub = s.substring(2,s.length());

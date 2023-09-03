@@ -10,7 +10,7 @@ public class exception_handling {
 
 
 
-        String s = "22";
+        String s = "22.1234.234.23";
         Solution ob = new Solution();
         try{
             ob.validIPAddress(s);
@@ -26,7 +26,9 @@ public class exception_handling {
 class Solution {
     public String validIPAddress(String queryIP) throws MyException{
 
-        String[] tokens = queryIP.split(".");
+
+        String[] tokens = queryIP.split("\\."); // split using '.' as delimeter
+        System.out.println(Arrays.toString(Arrays.stream(tokens).toArray()));
 
 
         try{
