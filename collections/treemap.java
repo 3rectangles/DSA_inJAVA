@@ -13,6 +13,8 @@ public class treemap {
          // 1 2 3 4 5 k1 . .. . .k2 .. . .inf
         String floor= om.floorKey(k2); // can return null
         String ceil = om.ceilingKey(k1); //O(logN)
-
+        if (floor != null) {
+            System.out.println(om.get(floor));
+        }
     }
 }
