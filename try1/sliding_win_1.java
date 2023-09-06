@@ -11,6 +11,9 @@ public class sliding_win_1 {
         ans =ob.lengthOfLongestSubstring(s);
 
         System.out.println(ans);
+
+        Random rnd = new Random();
+
     }
 }
 

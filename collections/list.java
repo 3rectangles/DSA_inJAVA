@@ -6,11 +6,20 @@ import java.util.*;
  *  List<Integer> l = new ArrayList<>(4);
  *  you created with an initial capacity of 4 means that the ArrayList can hold up to four elements without needing to resize.
  *  However, it doesn't mean that you have four elements preallocated; it simply means that it has room for four elements.
+ //add
+ //get
+ //set
+ //remove
+ //clear  --.empties the entire list
+
  */
 
 public class list {
 
     public static void main(String[] args) {
+//        List<Integer> l = new ArrayList<>();
+//        Collections.sort(l);
+
 
         int n =6;
         List<List<Integer>> graph = new ArrayList<>(n); // the n passed as an argument is the initial capacity of the ArrayList.

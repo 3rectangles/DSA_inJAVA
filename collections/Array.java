@@ -1,5 +1,6 @@
 package collections;
 
+import javax.print.attribute.standard.OrientationRequested;
 import java.util.*;
 
 public class Array {
@@ -83,6 +84,28 @@ public class Array {
          int[][] mat1 = read();
 
         print(mat1);
+
+        // 3d 3D array
+
+        // Example 3D array with dimensions 2x3x4
+        int[][][] array = new int[2][3][4];
+
+        // Set all values in the 3D array to -1
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                Arrays.fill(array[i][j], -1);
+            }
+        }
+
+        // OR
+        int[][][] dp = new int[100][2][3];
+        for (int[][] row : dp) {
+            for (int[] col : row) {
+                Arrays.fill(col, -1);
+            }
+        }
+
+
 
         // Create an array of TreeMap objects
         TreeMap<String, Integer>[] arrayOfTreeMaps = new TreeMap[3];
