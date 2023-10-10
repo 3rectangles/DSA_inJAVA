@@ -23,6 +23,8 @@ public class exception_handling {
 
 }
 
+
+
 class Solution {
     public String validIPAddress(String queryIP) throws MyException{
 
@@ -50,5 +52,39 @@ class Solution {
 class MyException extends Exception{
     MyException(String msg){
         super(msg);
+    }
+}
+
+/**
+ It's important to note that catch blocks should be ordered from the most specific (subtypes),
+ exceptions to the most generic (superclasses) exceptions.
+ This is because Java will choose the first matching catch block it encounters.
+ If you put the catch block for Exception before more specific catch blocks, the specific exceptions will never be caught because Exception will catch them first.
+
+
+
+ * */
+
+
+
+
+class Example {
+    public static void DevideByZero(String[] args) {
+        try {
+            // Code that may throw exceptions
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            // This block will execute because the exception thrown is ArithmeticException
+            System.out.println("ArithmeticException caught: " + e.getMessage());
+        } catch (NullPointerException e) {
+            // This block will not execute because the exception type doesn't match
+            System.out.println("NullPointerException caught: " + e.getMessage());
+        } catch (Exception e) {
+            // This block will not execute because the previous catch block already handled the exception
+            System.out.println("Generic Exception caught: " + e.getMessage());
+        }
+
+        // Code continues here after the try-catch blocks
+        System.out.println("Program continues...");
     }
 }
