@@ -132,16 +132,17 @@ class treeset {
     };
 
     /**
-     static TreeSet<movie> set = new TreeSet<>( (m1, m2) ->
-     {
-     if( m1.score != m2.score)
-     return m1.score-m2.score;
-     else
-     return m1.name.compareTo(m2.name);
-
-     }); //ascending order based on movie score
+     * static TreeSet<movie> set = new TreeSet<>( (m1, m2) ->
+     * {
+     * if( m1.score != m2.score)
+     * return m1.score-m2.score;
+     * else
+     * return m1.name.compareTo(m2.name);
+     * <p>
+     * }); //ascending order based on movie score
      */
     static TreeSet<movie> set = new TreeSet<>(cmp);
+
     public static void main(String[] args) {
 
 

@@ -37,12 +37,34 @@ public class list {
         List<Integer> l =new ArrayList<>();
         l.add(1); l.add(2);
 
+        Integer[] arr1 = l.toArray(new Integer[0]);
+        System.out.println(Arrays.toString(arr1) +"  used toArray function ");
+
         String a= "";
         a += a+"123";
         a = a.substring(0,a.length()-1);
         System.out.println(a);
 
+        // quicky initilization of list
 
+        List<Integer> l2 = List.of(1,2,3,4,50);
+        System.out.println(Arrays.toString(l2.toArray()));
+
+
+
+        // remove elements form list
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            if (element.equals("Banana")) {
+                iterator.remove(); // Removes the current element from the list
+            }
+        }
 
 
     }

@@ -158,6 +158,16 @@ public class Array {
         for (int i = 0; i < arrayOfTreeSets.length; i++) {
             System.out.println("TreeSet " + (i + 1) + ": " + arrayOfTreeSets[i]);
         }
+    // covert array to list
+
+        Integer[] arr = {1, 2, 3, 4, 5};
+
+        List<Integer> list = Arrays.asList(arr);
+
+        // The resulting list is backed by the original array, so modifications to the list
+        // will also modify the array.
+
+
     }
 
 // changed
