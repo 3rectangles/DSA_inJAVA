@@ -21,6 +21,8 @@ public class list {
 //        Collections.sort(l);
 
 
+
+
         int n =6;
         List<List<Integer>> graph = new ArrayList<>(n); // the n passed as an argument is the initial capacity of the ArrayList.
         // It means that the ArrayList is created with enough space to store n elements without needing to resize its internal array.

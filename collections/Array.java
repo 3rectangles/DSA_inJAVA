@@ -18,6 +18,7 @@ public class Array {
             }
 
         }
+
         return mat;
     }
     public  static void print(int[][] arr)
