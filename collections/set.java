@@ -154,6 +154,7 @@ class treeset {
          // Other TreeSet methods...
         System.out.println("Size of TreeSet: " + set.size());
         System.out.println("Is TreeSet empty? " + set.isEmpty());
+        // before using first and last, always check if the set is not empty else error will be thrown.
         System.out.println("First movie: " + set.first().name);
         System.out.println("Last movie: " + set.last().genre);
 
@@ -166,6 +167,7 @@ class treeset {
 
 
         // Get a subset of movies with scores between 10 and 20 (inclusive)
+        // NavigableSet --> SortedSet --> TreeSet( implementaion)
         SortedSet<movie> subset = set.subSet(new movie("", 10, ""), new movie("", 21, ""));
 
 // Get a headset of movies with scores strictly less
