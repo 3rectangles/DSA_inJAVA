@@ -57,7 +57,7 @@ public class graph_scc_kosaraju {
                     components++;
                     grp.clear();
                     dfs(node);
-                    componentsGrp.add(new ArrayList<>(grp));
+                    componentsGrp.add(new ArrayList<>(grp)); // important else shallow copy thing will happen
                 }
             }
         }

@@ -40,6 +40,7 @@ public class graph_Longest_path_using_BellmanFord {
                     if (dis.get(v) > dis.get(u) + wt) {
                         dis.set(v, dis.get(u) + wt);
                         flag = true;
+
                     }
                 }
 

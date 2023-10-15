@@ -26,7 +26,7 @@ public class graph_shortest_path_undirected {
         while (!queue.isEmpty()) {
            int u = queue.poll();
            for ( int child:adj[u]){
-               if( dis[child] > dis[u] +1) {
+               if( dis[u] != Integer.MAX_VALUE  && dis[child] > dis[u] +1) {
                    dis[child] = dis[u] +1;
                    path[child] = path[u];
                    par[child]=u;

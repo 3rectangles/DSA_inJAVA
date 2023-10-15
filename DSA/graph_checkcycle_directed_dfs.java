@@ -3,7 +3,8 @@ package DSA;
 import java.util.ArrayList;
 import java.util.*;
 
-public class graph_checkcycle_directed_dfs {
+public class
+graph_checkcycle_directed_dfs {
     static int n ; // vertices
     static int m; // edges
 
