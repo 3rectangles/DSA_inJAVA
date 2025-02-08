@@ -116,11 +116,51 @@ class movie{
         this.score = score;
         this.genre = genre;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        movie movie = (movie) obj;
+        return score == movie.score && name.equals(movie.name) && genre.equals(movie.genre);
+    }
+    // score is included in equals func bec its used to delete movie from set having old score
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, genre);
+    }
 }
 
 // treeset can be used as multiset in c++.
 // can take duplicate objects just have to provide comparator func for it
 
+/**
+ * This class demonstrates the usage of TreeSet and LinkedHashSet in Java.
+ * 
+ * The TreeSet is used to store a collection of movies, sorted by their scores in ascending order.
+ * If two movies have the same score, they are further sorted by their names.
+ * 
+ * The LinkedHashSet is used to maintain a collection of strings while preserving the insertion order.
+ * 
+ * Methods:
+ * - main(String[] args): Demonstrates various operations on the TreeSet, such as adding, removing, and searching for movies.
+ * - explainLinkedHashSet(): Demonstrates the usage of LinkedHashSet, including adding, removing, and checking for elements, while maintaining insertion order.
+ * 
+ * Comparator:
+ * - cmp: A comparator that compares movies based on their scores and names.
+ * 
+ * TreeSet:
+ * - set: A TreeSet of movies, sorted by their scores and names.
+ * 
+ * LinkedHashSet:
+ * - linkedHashSet: A LinkedHashSet of strings, maintaining insertion order.
+ * 
+ * Example usage:
+ * - Adding movies to the TreeSet and checking if a movie exists.
+ * - Getting subsets, headsets, and tailsets of movies based on their scores.
+ * - Updating the score of a movie and iterating through all movies in the TreeSet.
+ * - Adding, removing, and checking for elements in the LinkedHashSet.
+ */
 class treeset {
 
     static  Comparator<movie> cmp=(movie m1, movie m2)->
@@ -139,7 +179,7 @@ class treeset {
      * else
      * return m1.name.compareTo(m2.name);
      * <p>
-     * }); //ascending order based on movie score
+     * }); //ascending order based on movie scores and then names
      */
     static TreeSet<movie> set = new TreeSet<>(cmp);
 
@@ -164,6 +204,12 @@ class treeset {
         key = sc.nextInt();
         // giving examples to higher / lower /floor & ceiling
 
+
+
+        
+        // When you create a subset using the subSet method, the TreeSet relies on the comparator 
+        //to determine the range of elements to include in the subset.
+        // The subSet method works because the comparator is used to compare the elements based on their scores
 
 
         // Get a subset of movies with scores between 10 and 20 (inclusive)
@@ -215,6 +261,51 @@ class treeset {
 
 
     }
+
+    /**
+     * Question:
+     * You are given an array of integers that may contain duplicates. Your task is to remove all the duplicate elements 
+     * while preserving the order in which they first appear, and then return the resulting sequence.
+     */
+    public static void explainLinkedHashSet() {
+        // LinkedHashSet maintains the insertion order
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Banana");
+        linkedHashSet.add("Cherry");
+
+        System.out.println("LinkedHashSet elements:");
+        for (String element : linkedHashSet) {
+            System.out.println(element);
+        }
+
+        // Demonstrating the order
+        linkedHashSet.add("Date");
+        linkedHashSet.add("Elderberry");
+
+        System.out.println("\nAfter adding more elements:");
+        for (String element : linkedHashSet) {
+            System.out.println(element);
+        }
+
+        // Removing an element
+        linkedHashSet.remove("Banana");
+        System.out.println("\nAfter removing 'Banana':");
+        for (String element : linkedHashSet) {
+            System.out.println(element);
+        }
+
+        // Checking if an element exists
+        boolean containsApple = linkedHashSet.contains("Apple");
+        System.out.println("\nContains 'Apple': " + containsApple);
+
+        // Size of the LinkedHashSet
+        int size = linkedHashSet.size();
+        System.out.println("Size of LinkedHashSet: " + size);
+    }
+
+
+
 
 }
 

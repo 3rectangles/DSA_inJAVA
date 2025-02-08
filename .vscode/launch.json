@@ -1,0 +1,357 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "myCalendar1",
+      "request": "launch",
+      "mainClass": "DSA.MergeIntervals.myCalendar1",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "monotonicStack",
+      "request": "launch",
+      "mainClass": "DSA.monotonicStack",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Pattern_matching_Rabin_karp",
+      "request": "launch",
+      "mainClass": "DSA.Pattern_matching_Rabin_karp",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_CheapestFlightRouteWithCoupon",
+      "request": "launch",
+      "mainClass": "DSA.graph_CheapestFlightRouteWithCoupon",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_Longest_path_using_BellmanFord",
+      "request": "launch",
+      "mainClass": "DSA.graph_Longest_path_using_BellmanFord",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_TopologicalSort",
+      "request": "launch",
+      "mainClass": "DSA.graph_TopologicalSort",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_all_paths_dfs$Graph",
+      "request": "launch",
+      "mainClass": "DSA.graph_all_paths_dfs$Graph",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_bipartite_using_dfs",
+      "request": "launch",
+      "mainClass": "DSA.graph_bipartite_using_dfs",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_checkcycle_directed_dfs",
+      "request": "launch",
+      "mainClass": "DSA.graph_checkcycle_directed_dfs",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_countpath_inDAG_using_topo",
+      "request": "launch",
+      "mainClass": "DSA.graph_countpath_inDAG_using_topo",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_dsu",
+      "request": "launch",
+      "mainClass": "DSA.graph_dsu",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_eulerian_path",
+      "request": "launch",
+      "mainClass": "DSA.graph_eulerian_path",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_hamiltonian_path",
+      "request": "launch",
+      "mainClass": "DSA.graph_hamiltonian_path",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_k_shortest_path",
+      "request": "launch",
+      "mainClass": "DSA.graph_k_shortest_path",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_m_coloring",
+      "request": "launch",
+      "mainClass": "DSA.graph_m_coloring",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_multibfs",
+      "request": "launch",
+      "mainClass": "DSA.graph_multibfs",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_scc_kosaraju$KosarajuSCC",
+      "request": "launch",
+      "mainClass": "DSA.graph_scc_kosaraju$KosarajuSCC",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_shortest_path_undirected",
+      "request": "launch",
+      "mainClass": "DSA.graph_shortest_path_undirected",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_shortest_path_weighted_graph",
+      "request": "launch",
+      "mainClass": "DSA.graph_shortest_path_weighted_graph",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "graph_subtree",
+      "request": "launch",
+      "mainClass": "DSA.graph_subtree",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "lca_binarLifting",
+      "request": "launch",
+      "mainClass": "DSA.lca_binarLifting",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "longest_path_DAG_dp",
+      "request": "launch",
+      "mainClass": "DSA.longest_path_DAG_dp",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "segment_tree_sparse",
+      "request": "launch",
+      "mainClass": "DSA.segment_tree_sparse",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "segment_tree_with_node",
+      "request": "launch",
+      "mainClass": "DSA.segment_tree_with_node",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "sliding_win_fixed_len",
+      "request": "launch",
+      "mainClass": "DSA.sliding_win_fixed_len",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "trial",
+      "request": "launch",
+      "mainClass": "DSA.trial",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Array",
+      "request": "launch",
+      "mainClass": "collections.Array",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Function",
+      "request": "launch",
+      "mainClass": "collections.Function",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "collections.Main",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Maps",
+      "request": "launch",
+      "mainClass": "collections.Maps",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "PassFunc",
+      "request": "launch",
+      "mainClass": "collections.PassFunc",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "PassFuncUsingInterface",
+      "request": "launch",
+      "mainClass": "collections.PassFuncUsingInterface",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "PriorityQueueExample",
+      "request": "launch",
+      "mainClass": "collections.PriorityQueueExample",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Queue",
+      "request": "launch",
+      "mainClass": "collections.Queue",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "Stringclass",
+      "request": "launch",
+      "mainClass": "collections.Stringclass",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "bigint",
+      "request": "launch",
+      "mainClass": "collections.bigint",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "dequeue",
+      "request": "launch",
+      "mainClass": "collections.dequeue",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "exception_handling",
+      "request": "launch",
+      "mainClass": "collections.exception_handling",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "hashset",
+      "request": "launch",
+      "mainClass": "collections.hashset",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "list",
+      "request": "launch",
+      "mainClass": "collections.list",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "practiceques_collection",
+      "request": "launch",
+      "mainClass": "collections.practiceques_collection",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "set",
+      "request": "launch",
+      "mainClass": "collections.set",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "treemap",
+      "request": "launch",
+      "mainClass": "collections.treemap",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "treeset",
+      "request": "launch",
+      "mainClass": "collections.treeset",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "binary_search1",
+      "request": "launch",
+      "mainClass": "try1.binary_search1",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "setest",
+      "request": "launch",
+      "mainClass": "try1.setest",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "sliding_win_1",
+      "request": "launch",
+      "mainClass": "try1.sliding_win_1",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "treeset(1)",
+      "request": "launch",
+      "mainClass": "try1.treeset",
+      "projectName": "DSA_inJAVA_8903fd0"
+    },
+    {
+      "type": "java",
+      "name": "trial(1)",
+      "request": "launch",
+      "mainClass": "try1.trial",
+      "projectName": "DSA_inJAVA_8903fd0"
+    }
+  ]
+}

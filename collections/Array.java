@@ -45,9 +45,9 @@ public class Array {
 
 
 
-        int[] arr1 = {4, 8, 2};
+        int[] arr1 = {4, 8, 2}; // Fixed size array with 3 elements
         // OR
-        int[] arr2 = new int[]{4, 8, 2};
+        int[] arr2 = new int[]{4, 8, 2}; // Fixed size array with 3 elements
 
         Arrays.fill(arr,-1);
         arr[3]=6;
@@ -122,7 +122,8 @@ public class Array {
 
         // Add data to the second TreeMap
         arrayOfTreeMaps[1].put("C", 3);
-        arrayOfTreeMaps[1].put("D", 4);
+
+       arrayOfTreeMaps[1].put("D", 4);
 
         // Add data to the third TreeMap
         arrayOfTreeMaps[2].put("E", 5);
@@ -145,28 +146,71 @@ public class Array {
 
         // Add data to the first TreeSet
         arrayOfTreeSets[0].add(1);
-        arrayOfTreeSets[0].add(2);
 
-        // Add data to the second TreeSet
-        arrayOfTreeSets[1].add(3);
-        arrayOfTreeSets[1].add(4);
 
-        // Add data to the third TreeSet
-        arrayOfTreeSets[2].add(5);
-        arrayOfTreeSets[2].add(6);
+
+    // Add data to the second TreeSet
+
+   arrayOfTreeSets[1].add(3);
+
+   arrayOfTreeSets[1].add(4);
+
+    // Add data to the third TreeSet
+
+    arrayOfTreeSets[2].add(5);
+    arrayOfTreeSets[2].add(6);
 
         // Iterate over the array of TreeSets and print the contents
         for (int i = 0; i < arrayOfTreeSets.length; i++) {
             System.out.println("TreeSet " + (i + 1) + ": " + arrayOfTreeSets[i]);
         }
-    // covert array to list
+    // Convert array to list
+    Integer[] arr = {1, 2, 3, 4, 5};
 
-        Integer[] arr = {1, 2, 3, 4, 5};
+    // Creating a deep copy of the array as a list
+    List<Integer> list = new ArrayList<>(Arrays.asList(arr));
 
-        List<Integer> list = Arrays.asList(arr);
+    //creating shallow copy of list from array
 
-        // The resulting list is backed by the original array, so modifications to the list
-        // will also modify the array.
+
+    List<Integer> shallowListCopyFromArray = Arrays.asList(arr);
+
+    // The resulting list is a deep copy, so modifications to the original array
+    // will not affect the list, and vice versa.
+    System.out.println("Original array: " + Arrays.toString(arr));
+    System.out.println("List (deep copy of array): " + list);
+
+    // Shallow copy of the array
+    Integer[] shallowCopy = arr;
+
+    // Modifying the original array will affect the shallow copy
+    arr[0] = 10;
+    System.out.println("Original array after modification: " + Arrays.toString(arr));
+    System.out.println("Shallow copy: " + Arrays.toString(shallowCopy));
+
+    // Deep copy of the array
+    Integer[] deepCopy = Arrays.copyOf(arr, arr.length);
+
+    // Modifying the original array will not affect the deep copy
+    arr[1] = 20;
+    System.out.println("Original array after second modification: " + Arrays.toString(arr));
+    System.out.println("Deep copy: " + Arrays.toString(deepCopy));
+
+    // Shallow copy of the list
+    List<Integer> shallowListCopy = list;
+
+    // Modifying the original list will affect the shallow copy
+    list.set(0, 100);
+    System.out.println("Original list after modification: " + list);
+    System.out.println("Shallow list copy: " + shallowListCopy);
+
+    // Deep copy of the list
+    List<Integer> deepListCopy = new ArrayList<>(list);
+
+    // Modifying the original list will not affect the deep copy
+    list.set(1, 200);
+    System.out.println("Original list after second modification: " + list);
+    System.out.println("Deep list copy: " + deepListCopy);
 
 
     }

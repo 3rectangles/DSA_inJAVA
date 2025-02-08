@@ -59,6 +59,9 @@ class   PriorityQueueExample {
         priorityQueue.add(new Pair(1, "Value 1"));
         priorityQueue.add(new Pair(2, "Value 2"));
 
+         // Convert the priority queue to an array, erasure conversion
+         Pair[] array = priorityQueue.toArray(new Pair[0]);
+
         // Process pairs in the priority queue
         while (!priorityQueue.isEmpty()) {
             Pair pair = priorityQueue.poll();

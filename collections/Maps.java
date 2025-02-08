@@ -103,27 +103,23 @@ public class Maps {
         movieScores.put(name,score);
 
         um.get(genre).remove(new movies(name,oldsc,"")); //name & score are imp
-        // bec these are used in comparator func
+        // bec these are used in hashCose method of movie func
         um.get(genre).add(new movies(name,score,genre));
         return  true;
     }
 
-    public void addmovies(Map<String, TreeSet<movies>> um, movies mv){
-        String genre= mv.genre;
-        // if it's the first genre then add the empty treeset with comparator function
-        um.computeIfAbsent(genre, k -> new TreeSet<>(cmp));
-/**
-        if (um.get(genre) == null) {
-            um.put(genre, new  TreeSet<movies>(cmp)) ;
-        }
- */
-        // add the movie to the list
+public void addmovies(Map<String, TreeSet<movies>> um, movies mv){
+    if (mv == null) return;
+    String genre = mv.genre;
+    // if it's the first genre then add the empty treeset with comparator function
+    um.computeIfAbsent(genre, k -> new TreeSet<>(cmp));
+    // add the movie to the list if it doesn't already exist
+    if (!um.get(genre).contains(mv)) {
         um.get(genre).add(mv);
-        movieScores.put(mv.name,mv.score);
-        movieGenres.put(mv.name,mv.genre);
-
-        
+        movieScores.put(mv.name, mv.score);
+        movieGenres.put(mv.name, mv.genre);
     }
+}
 
     public String hashmap(Map<String, TreeSet<movies>> um, String genre){
         //To use a custom object as a key in a HashMap, override equal & hashcode
@@ -137,3 +133,20 @@ public class Maps {
     }
 }
 
+
+
+
+for (int i = 0; i <= n; i++) {
+    int currentHeight = (i == n) ? 0 : heights[i];
+
+    while (!stack.isEmpty() && heights[stack.peek()] > currentHeight) {
+        int height = heights[stack.pop()];
+        int width = stack.isEmpty() ? i : i - stack.peek() - 1;
+        maxArea = Math.max(maxArea, height * width);
+    }
+
+    stack.push(i);
+}
+
+return maxArea;
+}
